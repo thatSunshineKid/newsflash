@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% block sidebar %}
+<a href="/flash/write" class="btn btn-outline-warning" style="color:black;">New Author</a>
+
+{% endblock %}
+
+{% block content %}
+<h1>NewsFlash Home</h1>
+
+  <p>Welcome to <em>NewsFlash</em>, the easiest, best way to read the news!</p>
+
+<h2>New Posts:</h2>
+  <br>
+  {% for post in num_posts %}
+  <div class="well">
+  <ul class="list-group single-post">
+    <li class="list-group-item"><strong>Title: </strong> {{ post.title }}</li>
+    <li class="list-group-item list-group-item-success"><strong>Author: </strong> {{ post.author }}</li>
+    <li class="list-group-item list-group-item-info"><strong>Link: </strong><a href="{{ post.url }}" target="_blank"> Click to View Story</a></li>
+  </ul>
+</div>
+  {% endfor %}
+{% endblock %}
+
+{% block addpost %}
+<a href="/flash/create" class="btn btn-outline-warning" style="color:black;">Add A Post</a>
+
+{% endblock %}
