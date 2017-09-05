@@ -16,8 +16,17 @@
   <div class="well">
   <ul class="list-group single-post">
     <li class="list-group-item"><strong>Title: </strong>&nbsp;{{ post.title }}</li>
-    <li class="list-group-item list-group-item-success"><strong>Author: </strong>&nbsp;{{ post.author }}</li>
-    <li class="list-group-item list-group-item-info"><strong>Link:&nbsp;</strong><a href="{{ post.url }}" target="_blank">Click to View Story</a></li>
+    <li class="list-group-item list-group-item-success d-flex justify-content-between">
+      <div><strong>Author: </strong>&nbsp;{{ post.author }}</div>
+      <div><strong>Tags:</strong>&nbsp;TBD, coming soon, more</div>
+    </li>
+    <li class="list-group-item list-group-item-info d-flex justify-content-between">
+        <div><strong>Source:&nbsp;</strong>TBD</div>
+
+        <div>
+          <strong>Link:&nbsp;</strong><a href="{{ post.url }}" target="_blank">Click to View Story</a>
+        </div>
+    </li>
   </ul>
 </div>
   {% endfor %}
